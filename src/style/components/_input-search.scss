@@ -1,0 +1,12 @@
+.input-search {
+  display: flex;
+
+  &_text {
+
+  }
+
+  &_icon {
+    margin-right: 2rem;
+    color: var(--color-text-3)
+  }
+}
