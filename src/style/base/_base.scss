@@ -7,23 +7,50 @@
   --color-text-1: #{$secondary-color};
   --color-text-2: #{$grey};
   --color-text-3: #{$text-color-blue};
+  --alpha: #{$alpha};
+  --container-color: #{$container-color};
+  --input-bg-color: #{$container-color};
+  --input-color: #{$container-color-2};
+  --button-color: #{$button-color};
+  --button-border: #{$button-border};
+  --button-color-hover: #{$button-color-hover};
+  --username-color: #{$username-color};
 }
 
 [data-theme="dark"] {
   --primary-color: #{$black-color};
   --secondary-color: #{$black-color};
   --bg-color: #{$background-color-dark};
-  --color-text-1: #{$secondary-color};
+  --color-text-1: #{$primary-color};
   --color-text-3: #{$text-color-blue};
+  --alpha: 0;
+  --container-color: #{$container-color-2};
+  --input-bg-color: #{$container-color-2};
+  --input-color: #{$container-color}
 }
 
 html {
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px, 8 / 16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+  }
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  font-family: 'Inconsolata', monospace;
   background: var(--bg-color);
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }

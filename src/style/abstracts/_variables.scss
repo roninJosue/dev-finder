@@ -1,13 +1,20 @@
 // COLORS
 $primary-color: #f5f8ff;
 $secondary-color: #141c2f;
+$third-color: #0079FE;
 
 $black-color: #1c1720;
 $background-color: #f5f8ff;
 $background-color-dark: #141c2f;
 
-$text-color-blue: #0078fb;
+$container-color: #fefefe;
+$container-color-2: #1F2A48;
 
+$text-color-blue: #2A5896;
+$button-color: #0079FE;
+$button-border: darken($button-color, 20%);
+$button-color-hover: lighten($button-color, 10%);
+$username-color: lighten($third-color, 1%);
 $grey: #6b7688;
 
 $dark-blue-text: #272341; // For Headings
@@ -16,3 +23,5 @@ $dark-blue-text: #272341; // For Headings
 $default-font-size: 1.6rem;
 $big-font-size: 4rem;
 $mid-font-size: 2.5rem;
+
+$alpha: .95

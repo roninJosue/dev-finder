@@ -4,24 +4,41 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(tab-land) {
+    width: 100%;
+    padding: 3rem;
+  }
+
+
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3.5rem;
 
     &__title {
       margin: 0;
       color: var(--color-text-1);
+      font-size: 3rem;
     }
 
-    &__theme{
+    &__theme {
       color: var(--color-text-2);
       cursor: pointer;
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 2rem;
+      font-size: 1.4rem;
       border: none;
       background-color: transparent;
+      display: flex;
+      align-items: center;
+      letter-spacing: 8px;
+      font-family: 'Inconsolata', monospace;
+
+      &-icon {
+        font-size: 2rem;
+        margin-left: .5rem;
+      }
     }
 
     &__icon {
@@ -30,17 +47,17 @@
   }
 
   &-container {
-    background-color: #fefefe;
+    background-color: var(--container-color);
     border-radius: 10px;
-    padding: 1rem 2.5rem;
+    padding: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     //&not:last-child {
-      margin-bottom: 2rem;
+    margin-bottom: 3rem;
     //}
-    box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.45);
-    -webkit-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.45);
-    -moz-box-shadow: 0px 10px 18px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 10px 18px 0px rgba(232, 235, 250, var(--alpha));
+    -webkit-box-shadow: 0px 10px 18px 0px rgba(232, 235, 250, var(--alpha));
+    -moz-box-shadow: 0px 10px 18px 0px rgba(232, 235, 250, var(--alpha));
   }
 }

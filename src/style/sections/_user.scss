@@ -1,0 +1,112 @@
+.user {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 5rem;
+    @include respond(tab-land) {
+      align-items: center;
+    }
+  }
+
+  &-avatar {
+    border-radius: 50%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tab-land) {
+      justify-content: flex-start;
+    }
+  }
+
+  &-img {
+    width: 80%;
+    border-radius: 50%;
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+  }
+
+  &-description {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: self-start;
+
+    @include respond(tab-land) {
+      flex-basis: 95%;
+    }
+  }
+
+  &-name,
+  &-login {
+    margin: 0;
+    color: var(--color-text-1);
+  }
+
+  &-login {
+    font-size: 2.2rem;
+    color: var(--username-color);
+    margin-bottom: 1.1rem;
+  }
+
+  &-name {
+    margin-bottom: 1.1rem;
+    font-size: 3rem;
+  }
+
+  &-bio {
+/*    position: absolute;
+    text-align: justify;
+    top: 45%;
+    left: 28%;*/
+    color: var(--color-text-1);
+
+/*    @include respond(tab-land) {
+      top: 60%;
+      left: 17.2%;
+    }
+
+    @include respond(tab-port) {
+      top: 60%;
+      left: 22%;
+      width: 76%;
+      text-align: justify;
+    }*/
+
+    @include respond(phone) {
+      position: absolute;
+      /* top: 111%; */
+      width: 100%;
+      left: 50%;
+      bottom: -5rem;
+      text-align: center;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &-statistics {
+    align-self: center;
+    width: 46%;
+  }
+
+  &-joinedat,
+  &-bio {
+    font-size: 2rem;
+    color: var(--color-text-1);
+  }
+}

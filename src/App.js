@@ -1,8 +1,9 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css'
 import './App.css';
 import Header from "./components/Header";
 import Search from "./components/Search";
-import UserInfo from "./components/UserInfo";
+import User from "./components/User";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <section className='dev'>
         <Header />
         <Search />
-        <UserInfo />
+        <User />
       </section>
     </main>
   );

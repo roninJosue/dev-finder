@@ -1,12 +1,13 @@
 import React from "react"
 import Container from "../Container"
 import InputSearch from "./InputSearch";
+import Button from "./Button";
 
 const Search = () =>{
   return (
     <Container>
       <InputSearch placeHolder='Search GitHub username_'/>
-      <button>Search</button>
+      <Button text='Search' />
     </Container>
   )
 }

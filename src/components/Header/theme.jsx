@@ -1,4 +1,9 @@
 import React, {useState} from "react"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faMoon, faSun)
 
 const Theme = () => {
   const [theme, setTheme] = useState('light')
@@ -11,9 +16,20 @@ const Theme = () => {
 
   return (
     <button onClick={handleClick} className='dev-header__theme'>
-      {theme}
-      <i className={`dev-header__icon fa ${theme === 'light' ? 'fa-sun-o' : 'fa-moon-o'}`}></i>
+      <Icon
+        text={theme === 'dark' ? 'light' : 'dark'}
+        icon={theme === 'dark' ? 'sun' : 'moon'}
+      />
     </button>
+  )
+}
+
+const Icon = ({icon, text}) => {
+  return (
+    <>
+      <span>{text}</span>
+      <FontAwesomeIcon icon={icon} className='dev-header__theme-icon'/>
+    </>
   )
 }
 
