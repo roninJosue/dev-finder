@@ -13,7 +13,6 @@
     justify-content: space-around;
     align-items: flex-start;
     position: relative;
-    margin-bottom: 5rem;
     @include respond(tab-land) {
       align-items: center;
     }
@@ -67,26 +66,34 @@
   &-name {
     margin-bottom: 1.1rem;
     font-size: 3rem;
+
+    @include respond(phone-xs) {
+      font-size: 2.6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+    }
   }
 
   &-bio {
-/*    position: absolute;
-    text-align: justify;
-    top: 45%;
-    left: 28%;*/
+    /*    position: absolute;
+        text-align: justify;
+        top: 45%;
+        left: 28%;*/
     color: var(--color-text-1);
 
-/*    @include respond(tab-land) {
-      top: 60%;
-      left: 17.2%;
-    }
+    /*    @include respond(tab-land) {
+          top: 60%;
+          left: 17.2%;
+        }
 
-    @include respond(tab-port) {
-      top: 60%;
-      left: 22%;
-      width: 76%;
-      text-align: justify;
-    }*/
+        @include respond(tab-port) {
+          top: 60%;
+          left: 22%;
+          width: 76%;
+          text-align: justify;
+        }*/
 
     @include respond(phone) {
       position: absolute;
@@ -100,13 +107,72 @@
   }
 
   &-statistics {
-    align-self: center;
-    width: 46%;
+    background: var(--bg-color);
+    color: var(--color-text-1);
+    padding: 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    &-count {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-number {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-top: .625rem;
+    }
+
+
+    @include respond(phone) {
+      align-self: center;
+      margin-top: 8rem;
+      padding: 2rem;
+    }
+
+    @include respond(phone-xs) {
+      padding: 1rem;
+    }
+  }
+
+  &-contact,
+  &-statistics {
+    width: 73%;
+    align-self: flex-end;
+
+    @include respond(big-desktop) {
+      width: 74%;
+    }
+
+    @include respond(tab-land) {
+      width: 84%;
+    }
+
+    @include respond(tab-port) {
+      width: 77%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &-contact {
+    margin-top: 4rem;
   }
 
   &-joinedat,
   &-bio {
     font-size: 2rem;
     color: var(--color-text-1);
+  }
+
+  &-joinedat {
+    @include respond(phone-xs) {
+      font-size: 1.7rem;
+    }
   }
 }

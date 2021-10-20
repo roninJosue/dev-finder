@@ -1,6 +1,7 @@
 .search {
   display: flex;
   padding: 0 1.5rem;
+  width: 90%;
 
   &_text {
 
@@ -27,7 +28,7 @@
     border-radius: 10px;
     color: #fff;
     font-size: 2rem;
-    padding: 2rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     box-shadow: 0 4px var(--button-border);
     cursor: pointer;
     transition: all ease-in-out .02s;
