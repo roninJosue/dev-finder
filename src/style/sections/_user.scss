@@ -162,6 +162,22 @@
 
   &-contact {
     margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--color-text-1);
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &-social {
+    flex-basis: 50%;
+    margin-bottom: 3rem;
+
+    &-icon {
+      margin-right: 2rem;
+    }
   }
 
   &-joinedat,
