@@ -6,15 +6,14 @@ import {faTwitter} from "@fortawesome/free-brands-svg-icons"
 
 library.add(faMapMarkerAlt, faLink, faBuilding, faTwitter)
 
-console.log(library)
 
-const Contact = (props) => {
+const Contact = ({location, blog, twitter_username, company}) => {
   return (
     <div className='user-contact'>
-      <SocialMedia icon={faMapMarkerAlt} text='asdasdasadadasdasdasd'/>
-      <SocialMedia icon={faTwitter} text='asdasdasadadasdasdasd'/>
-      <SocialMedia icon={faLink} text='asdasdasadadasdasdasd'/>
-      <SocialMedia icon={faBuilding} text='asdasdasadadasdasdasd'/>
+      <SocialMedia icon={faMapMarkerAlt} text={location}/>
+      <SocialMedia icon={faTwitter} text={twitter_username}/>
+      <SocialMedia icon={faLink} text={blog}/>
+      <SocialMedia icon={faBuilding} text={company}/>
     </div>
   )
 }
@@ -25,7 +24,9 @@ const SocialMedia = ({icon, text}) => {
       <span className='user-social-icon'>
         <FontAwesomeIcon icon={icon}/>
       </span>
-      <span className='user-social-text'>{text}</span>
+      <span className='user-social-text'>{
+        text ? text : 'Not Available'
+      }</span>
     </div>
   )
 }

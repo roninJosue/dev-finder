@@ -1,11 +1,11 @@
 import React from "react"
 
-const Statistics  = () => {
+const Statistics  = ({followers, following, repos}) => {
   return(
     <div className='user-statistics'>
-      <Count label={'Repos'} number={'8'} />
-      <Count label={'Followers'} number={'3938'} />
-      <Count label={'Folowing'} number={'9'} />
+      <Count label={'Repos'} number={repos} />
+      <Count label={'Followers'} number={followers} />
+      <Count label={'Following'} number={following} />
     </div>
   )
 }

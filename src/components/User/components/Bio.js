@@ -1,8 +1,8 @@
 import React from "react"
 
-const Bio = (props) => {
+const Bio = ({bio}) => {
   return (
-    <div className='user-bio'>Bio asd as ada da ad ad ad ad a</div>
+    <div className='user-bio'>{bio}</div>
   )
 }
 
