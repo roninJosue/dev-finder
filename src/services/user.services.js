@@ -6,7 +6,7 @@ export const searchUser = async (search) => {
     .then(response => response.json())
     .then(user => {
       const {login} = user
-      userFind = login ? user : null
+      userFind = login ? user : {}
     })
 
   return userFind

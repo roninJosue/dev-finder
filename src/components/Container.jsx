@@ -1,8 +1,10 @@
 import React from "react"
 
-const Container = (props) => {
+const Container = ({classes = [], ...props}) => {
   return (
-    <div className='dev-container'>
+    <div
+      className={`dev-container ${[...classes].join(' ')}`}
+    >
       {props.children}
     </div>
   )

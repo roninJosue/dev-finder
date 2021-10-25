@@ -17,9 +17,13 @@ function App() {
         <section className='dev'>
           <Header />
           <Search />
-          {user
+          {(user && Object.keys(user).length)
             ? (<User />)
-            : (<UserNotFound />)
+            : (
+              <UserNotFound
+                user={user}
+              />
+            )
           }
         </section>
       </main>

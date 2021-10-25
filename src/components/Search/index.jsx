@@ -7,11 +7,14 @@ import {searchUser} from "../../services/user.services";
 
 const Search = () => {
   const [search, setSearch] = useState('');
+  const [btnDisabled, setBtnDisabled] = useState(false)
   const {setUser} = useContext(DevFinderContext)
 
   const handleClick = async () => {
+    setBtnDisabled(true)
     const findUser = await searchUser(search)
     setUser(findUser)
+    setBtnDisabled(false)
   }
 
   return (
@@ -25,6 +28,7 @@ const Search = () => {
       <Button
         text='Search'
         onClick={handleClick}
+        disabled={btnDisabled}
       />
     </Container>
   )

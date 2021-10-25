@@ -1,10 +1,11 @@
 import React from "react"
 
-const Button = ({text, onClick}) => {
+const Button = ({text, onClick, disabled}) => {
   return(
     <button
       className='search-button'
       onClick={onClick}
+      disabled={disabled}
     >
       {text}
     </button>

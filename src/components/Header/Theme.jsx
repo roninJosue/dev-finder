@@ -5,13 +5,16 @@ import {faSun, faMoon} from "@fortawesome/free-solid-svg-icons";
 
 library.add(faMoon, faSun)
 
+const getThemeFromLocalStorage = localStorage.getItem('theme');
+
 const Theme = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(getThemeFromLocalStorage || 'light')
+  document.documentElement.setAttribute('data-theme', theme);
 
   const handleClick = () => {
     const currentTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(currentTheme)
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
   }
 
   return (

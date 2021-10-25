@@ -68,4 +68,9 @@
     -webkit-box-shadow: 0 10px 18px 0 rgba(232, 235, 250, var(--alpha));
     -moz-box-shadow: 0 10px 18px 0 rgba(232, 235, 250, var(--alpha));
   }
+
+  &-not-found {
+    justify-content: center;
+    padding: 3rem;
+  }
 }
