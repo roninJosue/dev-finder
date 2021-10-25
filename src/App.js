@@ -10,7 +10,7 @@ import UserNotFound from "./components/User/components/UserNotFound";
 
 function App() {
   const {user, setUser} = useApp()
-  const value = useMemo(() => ({user, setUser}), [user])
+  const value = useMemo(() => ({user, setUser}), [user, setUser])
   return (
     <DevFinderProvider value={value}>
       <main className='App-header'>
